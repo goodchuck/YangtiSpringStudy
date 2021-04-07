@@ -58,6 +58,15 @@ public class NewlecExam implements Exam {
 		
 		int result = kor+eng+math+com;
 		
+		if(kor > 100)
+			try {
+				throw new IllegalAccessException("유효하지 않은 국어점수");
+			} catch (IllegalAccessException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+
+		
 		try {
 			Thread.sleep(200);
 		} catch (InterruptedException e) {
